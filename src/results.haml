@@ -33,21 +33,21 @@
       .row
         .logo.col-sm-12.col-md-3
           %img{:src => "images/job_search_indeed.png"}/        
-        .col-sm-4.col-md-3
-          %label.label-main{:for => "what"}what
+        .what.col-sm-5.col-md-3
+          %label.label-main{:for => "what"}what:
           %input.form-control#what{:type => "text"}
           %label.label-sub{:for => "what"}job title, keywords or company name
-        .col-sm-4.col-md-3
-          %label.label-main{:for => "where"}where
+        .where.col-sm-5.col-md-3
+          %label.label-main{:for => "where"}where:
           %input.form-control#where{:type => "text"}
           %label.label-sub{:for => "where"}city, state or zip code
-        .col-sm-2.col-md-1
-          %button.btn.btn-primary{:type => "button"}Find Jobs
-        .col-sm-2.col-md-2
-          %a.link-small{:href => "#"}Advanced Job Search
-    .container.sidebar
+        .col-sm-2.col-md-3.find-jobs-container
+          %button.btn.btn-primary.find-jobs{:type => "button"}Find Jobs
+          %br
+          %a.link-small{:href => "#"}Advanced Search
+    .container.results-content
       .row
-        .col-sm-12.col-md-3
+        .col-xs-12.col-sm-3
           %nav.navbar.navbar-default{:role => "navigation"}
             .navbar-header
               %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
@@ -69,7 +69,7 @@
                         %a{:href => "#"} within 25 miles
                       %li
                         %a{:href => "#"} within 50 miles
-                %li
+                %li#filters
                   .panel-group#accordion
                     .panel.panel-default
                       .panel-heading
@@ -119,10 +119,10 @@
                               %a{:href => '#'} Spencer, IN
                             %li
                               %a{:href => '#'} Bedford, IN
-        .col-sm-12.col-md-6.result-list
-          .row
+        .col-xs-12.col-sm-9.col-md-6.result-list
+          .row.post-your-resume
             .col-sm-8
-              %a.bold{:href => "#"}Post your resume          
+              %a{:href => "#"}Post your resume          
               %span - Let employers find you
             .col-sm-4.text-right
               %span.job-numbers Jobs 1 to 10 of 99
@@ -138,7 +138,30 @@
                 %p
                   %span.days-ago.dash-after 3 days ago
                   %a.email-link{:href => "mailto:"}Email
-        .col-sm-12.col-md-3.email-form
-            
-            
-      
+          .row
+            .email-form
+              %p.email-form_header Get new jobs for this search by email  
+              %label{:for => "email-address1", :value => ""}
+                My email:
+                %br
+                %input#email-address1
+              .checkbox
+              %label
+                %input{:type => "checkbox", :value => ""}>/
+                Also get an email with jobs recommended just for me
+              %br
+              %button.btn.btn-default.find-jobs{:type => "button"}Activate
+              %p.tiny-text You can cancel email alerts at any time        
+        .hidden-xs.hidden-sm.col-md-3.email-form
+          .email-form
+            %p.email-form_header Get new jobs for this search by email  
+            %label{:for => "email-address1", :value => ""}
+              My email:
+              %br
+              %input#email-address1
+            .checkbox
+            %label
+              %input{:type => "checkbox", :value => ""}>/
+              Also get an email with jobs recommended just for me
+            %button.btn.btn-default.find-jobs{:type => "button"}Activate
+            %p.tiny-text You can cancel email alerts at any time
