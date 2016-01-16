@@ -176,6 +176,12 @@ footer {
 @media (min-width: 768px) {
   footer {
     position: absolute; } }
+@media (min-width: 768px) {
+  .main-navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important; } }
 
 
 
