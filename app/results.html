@@ -8,6 +8,7 @@
     <link href='css/styles.css' rel='stylesheet'>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src='js/scripts.js'></script>
   </head>
   <body class='results'>
     <nav class='navbar navbar-default' role='navigation'>
@@ -69,23 +70,115 @@
           <nav class='navbar navbar-default' role='navigation'>
             <div class='navbar-header'>
               <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
-                <span class='glyphicon glyphicon-chevron-down'></span>
+                <span>Filter Results</span>
               </button>
             </div>
             <div class='collapse navbar-collapse'>
-              <div class='panel-heading'>Sidebar22</div>
               <ul class='nav nav-stacked'>
-                <li class='active'>
-                  <a href='#'>Link</a>
+                <li class='distance-dropdown'>
+                  <label for='distance'></label>
+                  <div class='dropdown'>
+                    <button aria-expanded='true' aria-haspopup='true' class='btn btn-default dropdown-toggle' data-toggle='dropdown' id='dropdownMenu1' type='button'>
+                      within 25 miles
+                      <span class='caret'></span>
+                    </button>
+                    <ul aria-labelledby='dropdownMenu1' class='dropdown-menu'>
+                      <li>
+                        <a href='#'>Exact location only</a>
+                      </li>
+                      <li>
+                        <a href='#'>within 10 miles</a>
+                      </li>
+                      <li>
+                        <a href='#'>within 25 miles</a>
+                      </li>
+                      <li>
+                        <a href='#'>within 50 miles</a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li>
-                  <a href='#'>Link</a>
-                </li>
-                <li>
-                  <a href='#'>Link</a>
-                </li>
-                <li>
-                  <a href='#'>Link</a>
+                  <div class='panel-group' id='accordion'>
+                    <div class='panel panel-default'>
+                      <div class='panel-heading'>
+                        <p>
+                          <i class='indicator glyphicon glyphicon-triangle-bottom'></i>
+                          <a class='accordion-toggle' data-parent='#accordion' data-toggle='collapse' href='#collapseOne'>Salary Estimate</a>
+                        </p>
+                      </div>
+                      <div class='panel-collapse collapse in' id='collapseOne'>
+                        <div class='panel-body'>
+                          <ul class='list-unstyled'>
+                            <li>
+                              <a href='#'>$30,000+</a>
+                            </li>
+                            <li>
+                              <a href='#'>$40,000+</a>
+                            </li>
+                            <li>
+                              <a href='#'>$50,000+</a>
+                            </li>
+                            <li>
+                              <a href='#'>$60,000+</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='panel panel-default'>
+                      <div class='panel-heading'>
+                        <p>
+                          <i class='indicator glyphicon glyphicon-triangle-bottom'></i>
+                          <a class='accordion-toggle' data-parent='#accordion' data-toggle='collapse' href='#collapseTwo'>Job Type</a>
+                        </p>
+                      </div>
+                      <div class='panel-collapse collapse' id='collapseTwo'>
+                        <div class='panel-body'>
+                          <ul class='list-unstyled'>
+                            <li>
+                              <a href='#'>Full-time</a>
+                            </li>
+                            <li>
+                              <a href='#'>Part-time</a>
+                            </li>
+                            <li>
+                              <a href='#'>Internship</a>
+                            </li>
+                            <li>
+                              <a href='#'>Contract</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='panel panel-default'>
+                      <div class='panel-heading'>
+                        <p>
+                          <i class='indicator glyphicon glyphicon-triangle-bottom'></i>
+                          <a class='accordion-toggle' data-parent='#accordion' data-toggle='collapse' href='#collapseThree'>Location</a>
+                        </p>
+                      </div>
+                      <div class='panel-collapse collapse' id='collapseThree'>
+                        <div class='panel-body'>
+                          <ul class='list-unstyled'>
+                            <li>
+                              <a href='#'>Bloomington, IN</a>
+                            </li>
+                            <li>
+                              <a href='#'>Martinsville, IN</a>
+                            </li>
+                            <li>
+                              <a href='#'>Spencer, IN</a>
+                            </li>
+                            <li>
+                              <a href='#'>Bedford, IN</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </div>

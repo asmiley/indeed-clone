@@ -8,6 +8,7 @@
     %link{:href => "css/styles.css", :rel => "stylesheet"}/
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
     %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
+    %script{:src => "js/scripts.js"}
   %body.results
     %nav.navbar.navbar-default{:role => "navigation"}
       %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
@@ -50,18 +51,74 @@
           %nav.navbar.navbar-default{:role => "navigation"}
             .navbar-header
               %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-                %span.glyphicon.glyphicon-chevron-down
+                %span Filter Results
             .collapse.navbar-collapse
-              .panel-heading Sidebar22
               %ul.nav.nav-stacked
-                %li.active
-                  %a{:href => "#"} Link
+                %li.distance-dropdown
+                  %label{:for => "distance"}
+                  .dropdown
+                    %button#dropdownMenu1.btn.btn-default.dropdown-toggle{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+                      within 25 miles
+                      %span.caret
+                    %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1"}
+                      %li
+                        %a{:href => "#"} Exact location only
+                      %li
+                        %a{:href => "#"} within 10 miles
+                      %li
+                        %a{:href => "#"} within 25 miles
+                      %li
+                        %a{:href => "#"} within 50 miles
                 %li
-                  %a{:href => "#"} Link
-                %li
-                  %a{:href => "#"} Link
-                %li
-                  %a{:href => "#"} Link
+                  .panel-group#accordion
+                    .panel.panel-default
+                      .panel-heading
+                        %p
+                          %i.indicator.glyphicon.glyphicon-triangle-bottom
+                          %a.accordion-toggle{"data-toggle" => "collapse", "data-parent" => "#accordion", "href" => "#collapseOne"} Salary Estimate
+                      #collapseOne.panel-collapse.collapse.in
+                        .panel-body
+                          %ul.list-unstyled
+                            %li
+                              %a{:href => '#'} $30,000+
+                            %li
+                              %a{:href => '#'} $40,000+
+                            %li
+                              %a{:href => '#'} $50,000+
+                            %li
+                              %a{:href => '#'} $60,000+
+                    .panel.panel-default
+                      .panel-heading
+                        %p
+                          %i.indicator.glyphicon.glyphicon-triangle-bottom
+                          %a.accordion-toggle{"data-toggle" => "collapse", "data-parent" => "#accordion", "href" => "#collapseTwo"} Job Type
+                      #collapseTwo.panel-collapse.collapse
+                        .panel-body
+                          %ul.list-unstyled
+                            %li
+                              %a{:href => '#'} Full-time
+                            %li
+                              %a{:href => '#'} Part-time
+                            %li
+                              %a{:href => '#'} Internship
+                            %li
+                              %a{:href => '#'} Contract
+                    .panel.panel-default
+                      .panel-heading
+                        %p
+                          %i.indicator.glyphicon.glyphicon-triangle-bottom
+                          %a.accordion-toggle{"data-toggle" => "collapse", "data-parent" => "#accordion", "href" => "#collapseThree"} Location
+                      #collapseThree.panel-collapse.collapse
+                        .panel-body
+                          %ul.list-unstyled
+                            %li
+                              %a{:href => '#'} Bloomington, IN
+                            %li
+                              %a{:href => '#'} Martinsville, IN
+                            %li
+                              %a{:href => '#'} Spencer, IN
+                            %li
+                              %a{:href => '#'} Bedford, IN
         .col-sm-12.col-md-6.result-list
           .row
             .col-sm-8
