@@ -8,11 +8,16 @@
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
   </head>
-  <body>
-    <nav class='navbar navbar-default'>
+  <body class='home'>
+    <nav class='navbar navbar-default' role='navigation'>
+      <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+        <span class='icon-bar'></span>
+      </button>
       <div class='container-fluid'>
         <div class='collapse navbar-collapse'>
-          <ul class='nav navbar-nav'>
+          <ul class='nav navbar-nav navbar-left'>
             <li class='active'>
               <a href='#'>Find Jobs</a>
             </li>
@@ -22,6 +27,8 @@
             <li>
               <a href='#'>Employers / Post Job</a>
             </li>
+          </ul>
+          <ul class='nav navbar-nav navbar-right'>
             <li>
               <a href='#'>Upload your resume</a>
             </li>
@@ -41,30 +48,16 @@
       <div class='row'>
         <div class='col-lg-5'>
           <label class='label-main' for='what'>what</label>
-        </div>
-        <div class='col-lg-7'>
-          <label class='label-main' for='where'>where</label>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='col-lg-5'>
-          <input class='form-control' id='where' type='text'>
-        </div>
-        <div class='col-lg-5'>
-          <input class='form-control' id='where' type='text'>
-        </div>
-        <div class='col-lg-2'>
-          <button class='btn btn-primary' type='button'>Find Jobs</button>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='col-lg-5'>
+          <input class='form-control' id='what' type='text'>
           <label class='label-sub' for='what'>job title, keywords or company name</label>
         </div>
         <div class='col-lg-5'>
+          <label class='label-main' for='where'>where</label>
+          <input class='form-control' id='where' type='text'>
           <label class='label-sub' for='where'>city, state or zip code</label>
         </div>
         <div class='col-lg-2'>
+          <button class='btn btn-primary' type='button'>Find Jobs</button>
           <a class='link-small' href='#'>Advanced Job Search</a>
         </div>
       </div>

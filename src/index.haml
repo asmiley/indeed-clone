@@ -7,17 +7,22 @@
     %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", :rel => "stylesheet"}/
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
     %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
-  %body
-    %nav.navbar.navbar-default
+  %body.home
+    %nav.navbar.navbar-default{:role => "navigation"}
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
       .container-fluid
         .collapse.navbar-collapse
-          %ul.nav.navbar-nav
+          %ul.nav.navbar-nav.navbar-left
             %li.active
               %a{:href => "#"} Find Jobs
             %li
               %a{:href => "#"} Find Resumes
             %li
               %a{:href => "#"} Employers / Post Job
+          %ul.nav.navbar-nav.navbar-right
             %li
               %a{:href => "#"} Upload your resume
             %li
@@ -29,21 +34,14 @@
       .row
         .col-lg-5
           %label.label-main{:for => "what"}what
-        .col-lg-7
-          %label.label-main{:for => "where"}where
-      .row
-        .col-lg-5
-          %input.form-control#where{:type => "text"}
-        .col-lg-5
-          %input.form-control#where{:type => "text"}
-        .col-lg-2
-          %button.btn.btn-primary{:type => "button"}Find Jobs
-      .row
-        .col-lg-5
+          %input.form-control#what{:type => "text"}
           %label.label-sub{:for => "what"}job title, keywords or company name
         .col-lg-5
+          %label.label-main{:for => "where"}where
+          %input.form-control#where{:type => "text"}
           %label.label-sub{:for => "where"}city, state or zip code
         .col-lg-2
+          %button.btn.btn-primary{:type => "button"}Find Jobs
           %a.link-small{:href => "#"}Advanced Job Search
       .row.indeed-info.text-center
         %p
