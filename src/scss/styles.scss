@@ -2,9 +2,10 @@
 Variables
 **************/
 
-
+$accent: #f60;
 $link-color: #00c;
-
+$light-gray: #aaa;
+$alt-link-color: #77C;
 
 /**************
 Base
@@ -14,6 +15,22 @@ a{
 }
 
 
+.navbar-toggle{
+  z-index: 100;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  margin-bottom: 100px;
+  min-height: 600px;
+}
+
+navbar-default a{
+  color: $link-color;
+}
 /**************
 Utilities
 **************/
@@ -53,6 +70,9 @@ Search
 .find-jobs-container{
     text-align: center;
     margin-bottom: 15px;
+    a{
+      color: $alt-link-color;
+    }
 }
 
 .find-jobs-container a{
@@ -60,11 +80,11 @@ Search
 }
 
 .label-main{
-  color: #f60;
+  color: $accent;
   font-size: 12px;
 }
 .label-sub{
-  color: #aaa;
+  color: $light-gray;
   font-size: 11px;
 }
 /**************
@@ -74,6 +94,14 @@ Home
   max-width: 800px;
 }
 
+.post-icon span{
+  background: url("../images/submit-icon.png");
+  width: 18px;
+  height: 24px;
+  margin-top: -3px;
+  vertical-align: middle;
+  display: inline-block;
+}
 /**************
 Sidebar
 **************/
@@ -109,7 +137,7 @@ Results
 }
 
 .result-list {
-  border-bottom: 2px solid #f60;
+  border-bottom: 2px solid $accent;
 }
 
 .results-content{
@@ -118,16 +146,99 @@ Results
 
 .result-title {
   font-size: 16px;
-  font-weight: 600;
-  
+  font-weight: 600; 
 }
+
+.result-container{
+  padding: 15px;
+}
+
+.result-company{
+
+}
+.result-location{
+  color: $light-gray;
+}
+
+.result-description{
+  font-size: 13px;
+  margin-top: 3px;
+}
+.days-ago{
+  color: $light-gray;
+}
+.email-link{
+  color: $alt-link-color;
+}
+.ez-apply{
+  color: $accent;
+}
+.result-footer{
+  margin-top: 30px;
+}
+
+.tiny-text{
+  color: $light-gray;
+  font-size: 10px;
+  margin-top: 10px;
+}
+.email-form{
+  label{
+    font-weight: 100;
+    font-size: 14px;
+  }
+  button{
+    margin-top: 15px;
+  }
+}
+
+.result-list .email-form{
+    padding: 15px;
+}
+
+/**************
+Pagination
+**************/
+.pages nav{
+  text-align: center;
+}
+
 /**************
 Footer
 **************/
 
 footer{
-  position: absolute;
+  margin-top: 30px;
   bottom: 0;
   left: 0;
+  position: relative;
   width: 100%;
+  div a{
+    color: $alt-link-color;
+  }
 }
+
+@media (max-width: 1200px) {
+  footer{
+    text-align:center;
+    ul {
+      display: inline;
+      margin: 0 auto;
+      
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  
+  footer .terms{
+    text-align: right;
+  }
+}
+
+@media (min-width: 768px) {
+  footer{
+     position: absolute;
+  }
+}
+
