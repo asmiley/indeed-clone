@@ -18,7 +18,7 @@
       .container-fluid
         .collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-left
-            %li.active
+            %li
               %a{:href => "#"} Find Jobs
             %li
               %a{:href => "#"} Find Resumes
@@ -43,7 +43,8 @@
           %input.form-control#where{:type => "text"}
           %label.label-sub{:for => "where"}city, state or zip code
         .col-md-2.find-jobs-container
-          %button.btn.btn-primary.find-jobs{:type => "button"}Find Jobs
+          %a{:href => "results.html"}
+            %button.btn.btn-primary.find-jobs{:type => "button"}Find Jobs
           %br
           %a.link-small{:href => "#"}Advanced Search
       .row.indeed-info.text-center
@@ -54,8 +55,8 @@
           %span - It only takes a few seconds
         %p.welcome-message 814,582 new jobs in the last 7 days<br />Search job sites, newspapers, associations and company career pages.
         %p.learn-more Learn more about <a href="#">How the world works<a>
-    %footer.container-fluid{:role => "nav"}
-      .col-md-6
+    %footer{:role => "nav"}
+      .col-lg-6
         %ul.footer-left-links.list-inline.text-left
           %li.dash-after
             %a{:href => "#"}Salaries
@@ -71,7 +72,7 @@
             %a{:href => "#"}About
           %li
             %a{:href => "#"}Help Center
-      .col-md-6.text-right
+      .col-lg-6.terms
         %a{:href => "#"}Cookies, Privacy, and Terms
-           
-                  
+          
+                
