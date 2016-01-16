@@ -8,4 +8,69 @@
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
     %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
   %body
-
+    %nav.navbar.navbar-default
+      .container-fluid
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li.active
+              %a{:href => "#"} Find Jobs
+            %li
+              %a{:href => "#"} Find Resumes
+            %li
+              %a{:href => "#"} Employers / Post Job
+            %li
+              %a{:href => "#"} Upload your resume
+            %li
+              %a{:href => "#"} Sign in
+    .container
+      .row
+        .logo
+          %img{:src => "images/job_search_indeed.png"}/
+      .row
+        .col-lg-5
+          %label.label-main{:for => "what"}what
+        .col-lg-7
+          %label.label-main{:for => "where"}where
+      .row
+        .col-lg-5
+          %input.form-control#where{:type => "text"}
+        .col-lg-5
+          %input.form-control#where{:type => "text"}
+        .col-lg-2
+          %button.btn.btn-primary{:type => "button"}Find Jobs
+      .row
+        .col-lg-5
+          %label.label-sub{:for => "what"}job title, keywords or company name
+        .col-lg-5
+          %label.label-sub{:for => "where"}city, state or zip code
+        .col-lg-2
+          %a.link-small{:href => "#"}Advanced Job Search
+      .row.indeed-info.text-center
+        %p
+          %a.post-icon{:href => "#"}
+            %span
+          %a.bold{:href => "#"}Post your resume          
+          %span - It only takes a few seconds
+        %p.welcome-message 814,582 new jobs in the last 7 days<br />Search job sites, newspapers, associations and company career pages.
+        %p.learn-more Learn more about <a href="#">How the world works<a>
+    %footer.container-fluid{:role => "nav"}
+      .col-lg-8
+        %ul.footer-left-links.list-inline.text-left
+          %li
+            %a{:href => "#"}Salaries
+          %li
+            %a{:href => "#"}Trends
+          %li
+            %a{:href => "#"}Browse Jobs
+          %li
+            %a{:href => "#"}API
+          %li
+            %a{:href => "#"}Countries
+          %li
+            %a{:href => "#"}About
+          %li
+            %a{:href => "#"}Help Center
+      .col-lg-4.text-right
+        %a{:href => "#"}Cookies, Privacy, and Terms
+           
+                  
