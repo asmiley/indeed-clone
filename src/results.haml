@@ -11,14 +11,14 @@
     %script{:src => "js/scripts.js"}
   %body.results
     %nav.navbar.navbar-default{:role => "navigation"}
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+      %button.navbar-toggle{"data-target" => ".navbar-collapse1", "data-toggle" => "collapse", :type => "button"}
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
       .container-fluid
-        .collapse.navbar-collapse
+        .navbar-collapse1
           %ul.nav.navbar-nav.navbar-left
-            %li.active
+            %li
               %a{:href => "#"} Find Jobs
             %li
               %a{:href => "#"} Find Resumes
@@ -126,19 +126,19 @@
               %span - Let employers find you
             .col-sm-4.text-right
               %span.job-numbers Jobs 1 to 10 of 99
-          .row
-          - 5.times do
-            %ul.list-unstyled
-              %li.result
-                %a.result-title{:href => "#"} Senior Web Developer<br /> 
-                %span.result-company.dash-after Indiana University
-                %span.result-location Bloomington, IN
-                %p.result-description Lorem ipsum dolor sit amet, ad dictas verterem voluptatibus mea, te harum rationibus est. An vim wisi tractatos, ex ridens regione inermis qui. Ne nemore alienum inciderint pro, ne doctus torquatos sit...
-                %p.ez-apply Easily apply 
-                %p
-                  %span.days-ago.dash-after 3 days ago
-                  %a.email-link{:href => "mailto:"}Email
-          .row
+          .row.result-container
+            - 5.times do
+              %ul.list-unstyled
+                %li.result
+                  %a.result-title{:href => "#"} Senior Web Developer<br /> 
+                  %span.result-company.dash-after Indiana University
+                  %span.result-location Bloomington, IN
+                  %p.result-description Lorem ipsum dolor sit amet, ad dictas verterem voluptatibus mea, te harum rationibus est. An vim wisi tractatos, ex ridens regione inermis qui. Ne nemore alienum inciderint pro, ne doctus torquatos sit...
+                  %p.ez-apply Easily apply 
+                  %p
+                    %span.days-ago.dash-after 3 days ago
+                    %a.email-link{:href => "mailto:"}Email
+          .row.results-email-form
             .email-form
               %p.email-form_header Get new jobs for this search by email  
               %label{:for => "email-address1", :value => ""}
@@ -148,10 +148,35 @@
               .checkbox
               %label
                 %input{:type => "checkbox", :value => ""}>/
-                Also get an email with jobs recommended just for me
+                &nbsp;&nbsp;Also get an email with jobs recommended just for me
               %br
-              %button.btn.btn-default.find-jobs{:type => "button"}Activate
-              %p.tiny-text You can cancel email alerts at any time        
+              %button.btn.btn-default{:type => "button"}Activate
+              %p.tiny-text You can cancel email alerts at any time
+          .row.pages
+            %nav
+              %ul.pagination
+                %li.disabled
+                  %a{"aria-label" => "Previous", :href => "#"}
+                    %span{"aria-hidden" => "true"} «
+                %li.active
+                  %a{:href => "#"}
+                    1
+                    %span.sr-only (current)
+                %li
+                  %a{:href => "#"} 2
+                %li
+                  %a{:href => "#"} 3
+                %li
+                  %a{:href => "#"} 4
+                %li
+                  %a{:href => "#"} 5
+                %li
+                  %a{:href => "#"} 6
+                %li
+                  %a{:href => "#"} 7
+                %li
+                  %a{"aria-label" => "Next", :href => "#"}
+                    %span{"aria-hidden" => "true"} »                        
         .hidden-xs.hidden-sm.col-md-3.email-form
           .email-form
             %p.email-form_header Get new jobs for this search by email  
@@ -162,6 +187,25 @@
             .checkbox
             %label
               %input{:type => "checkbox", :value => ""}>/
-              Also get an email with jobs recommended just for me
-            %button.btn.btn-default.find-jobs{:type => "button"}Activate
+              &nbsp;&nbsp;Also get an email with jobs recommended just for me
+            %button.btn.btn-default{:type => "button"}Activate
             %p.tiny-text You can cancel email alerts at any time
+      .result-footer{:role => "nav"}
+        .footer-links.text-center
+          %ul.list-inline
+            %li.dash-after
+              %a{:href => "#"}Salaries
+            %li.dash-after
+              %a{:href => "#"}Trends
+            %li.dash-after
+              %a{:href => "#"}Browse Jobs
+            %li.dash-after
+              %a{:href => "#"}API
+            %li.dash-after
+              %a{:href => "#"}Countries
+            %li.dash-after
+              %a{:href => "#"}About
+            %li
+              %a{:href => "#"}Help Center
+        .terms.text-center
+          %a{:href => "#"}Cookies, Privacy, and Terms
