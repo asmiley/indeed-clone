@@ -5,7 +5,9 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
     %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "css/styles.css", :rel => "stylesheet"}/
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
+    %script{:src => "js/scripts.js"}
     %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
   %body.home
     %nav.navbar.navbar-default{:role => "navigation"}
@@ -32,17 +34,18 @@
         .logo
           %img{:src => "images/job_search_indeed.png"}/
       .row
-        .col-lg-5
-          %label.label-main{:for => "what"}what
+        .what.col-sm-6.col-md-5
+          %label.label-main{:for => "what"}what:
           %input.form-control#what{:type => "text"}
           %label.label-sub{:for => "what"}job title, keywords or company name
-        .col-lg-5
-          %label.label-main{:for => "where"}where
+        .where.col-sm-6.col-md-5
+          %label.label-main{:for => "where"}where:
           %input.form-control#where{:type => "text"}
           %label.label-sub{:for => "where"}city, state or zip code
-        .col-lg-2
-          %button.btn.btn-primary{:type => "button"}Find Jobs
-          %a.link-small{:href => "#"}Advanced Job Search
+        .col-md-2.find-jobs-container
+          %button.btn.btn-primary.find-jobs{:type => "button"}Find Jobs
+          %br
+          %a.link-small{:href => "#"}Advanced Search
       .row.indeed-info.text-center
         %p
           %a.post-icon{:href => "#"}
@@ -52,23 +55,23 @@
         %p.welcome-message 814,582 new jobs in the last 7 days<br />Search job sites, newspapers, associations and company career pages.
         %p.learn-more Learn more about <a href="#">How the world works<a>
     %footer.container-fluid{:role => "nav"}
-      .col-lg-8
+      .col-md-6
         %ul.footer-left-links.list-inline.text-left
-          %li
+          %li.dash-after
             %a{:href => "#"}Salaries
-          %li
+          %li.dash-after
             %a{:href => "#"}Trends
-          %li
+          %li.dash-after
             %a{:href => "#"}Browse Jobs
-          %li
+          %li.dash-after
             %a{:href => "#"}API
-          %li
+          %li.dash-after
             %a{:href => "#"}Countries
-          %li
+          %li.dash-after
             %a{:href => "#"}About
           %li
             %a{:href => "#"}Help Center
-      .col-lg-4.text-right
+      .col-md-6.text-right
         %a{:href => "#"}Cookies, Privacy, and Terms
            
                   
