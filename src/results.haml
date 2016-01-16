@@ -1,0 +1,87 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title Bootstrap Example
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", :rel => "stylesheet"}/
+    %link{:href => "css/styles.css", :rel => "stylesheet"}/
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"}
+    %script{:src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"}
+  %body.results
+    %nav.navbar.navbar-default{:role => "navigation"}
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      .container-fluid
+        .collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-left
+            %li.active
+              %a{:href => "#"} Find Jobs
+            %li
+              %a{:href => "#"} Find Resumes
+            %li
+              %a{:href => "#"} Employers / Post Job
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a{:href => "#"} Upload your resume
+            %li
+              %a{:href => "#"} Sign in
+    .container
+      .row
+        .logo.col-sm-12.col-md-3
+          %img{:src => "images/job_search_indeed.png"}/        
+        .col-sm-4.col-md-3
+          %label.label-main{:for => "what"}what
+          %input.form-control#what{:type => "text"}
+          %label.label-sub{:for => "what"}job title, keywords or company name
+        .col-sm-4.col-md-3
+          %label.label-main{:for => "where"}where
+          %input.form-control#where{:type => "text"}
+          %label.label-sub{:for => "where"}city, state or zip code
+        .col-sm-2.col-md-1
+          %button.btn.btn-primary{:type => "button"}Find Jobs
+        .col-sm-2.col-md-2
+          %a.link-small{:href => "#"}Advanced Job Search
+    .container.sidebar
+      .row
+        .col-sm-12.col-md-3
+          %nav.navbar.navbar-default{:role => "navigation"}
+            .navbar-header
+              %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+                %span.glyphicon.glyphicon-chevron-down
+            .collapse.navbar-collapse
+              .panel-heading Sidebar22
+              %ul.nav.nav-stacked
+                %li.active
+                  %a{:href => "#"} Link
+                %li
+                  %a{:href => "#"} Link
+                %li
+                  %a{:href => "#"} Link
+                %li
+                  %a{:href => "#"} Link
+        .col-sm-12.col-md-6.result-list
+          .row
+            .col-sm-8
+              %a.bold{:href => "#"}Post your resume          
+              %span - Let employers find you
+            .col-sm-4.text-right
+              %span.job-numbers Jobs 1 to 10 of 99
+          .row
+          - 5.times do
+            %ul.list-unstyled
+              %li.result
+                %a.result-title{:href => "#"} Senior Web Developer<br /> 
+                %span.result-company.dash-after Indiana University
+                %span.result-location Bloomington, IN
+                %p.result-description Lorem ipsum dolor sit amet, ad dictas verterem voluptatibus mea, te harum rationibus est. An vim wisi tractatos, ex ridens regione inermis qui. Ne nemore alienum inciderint pro, ne doctus torquatos sit...
+                %p.ez-apply Easily apply 
+                %p
+                  %span.days-ago.dash-after 3 days ago
+                  %a.email-link{:href => "mailto:"}Email
+        .col-sm-12.col-md-3.email-form
+            
+            
+      
