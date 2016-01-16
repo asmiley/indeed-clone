@@ -13,7 +13,7 @@ module.exports = {
   },
   sass: {
     src: './src/scss/**/*.{sass,scss}',
-    dest: './src/css',
+    dest: './app/css',
     options: {
       noCache: true,
       bundleExec: true,
