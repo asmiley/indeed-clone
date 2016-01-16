@@ -159,10 +159,13 @@ Results
 .result-location{
   color: $light-gray;
 }
-
+.result {
+  margin-bottom: 20px;
+}
 .result-description{
   font-size: 13px;
   margin-top: 3px;
+  margin-bottom: 5px;
 }
 .days-ago{
   color: $light-gray;
@@ -172,6 +175,7 @@ Results
 }
 .ez-apply{
   color: $accent;
+  margin: 0 0;
 }
 .result-footer{
   margin-top: 30px;
